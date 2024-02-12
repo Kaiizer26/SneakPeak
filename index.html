@@ -42,7 +42,7 @@
         <!-- Register - Log in -->
         <li>
             <a href="index.html" id="login">Log in</a>
-            <button id="button-login">
+            <button class="button" id="button-login">
                 <a href="index.html">Sign up</a>
             </button>
         </li>
@@ -53,7 +53,7 @@
     <nav>
         <h1>Le site de sneakers pour les <br>passionnés.</h1>
         <h2>Trouve ton flow.</h2>
-        <button><a href="index.html">Découvrir</a></button>
+        <button class="button"><a href="index.html">Découvrir</a></button>
 
 
 
@@ -351,7 +351,7 @@
             </article>
 
 
-            <article><img src="images/img01 (15).avif">
+            <article><img class="img-produit" src="images/img01 (15).avif">
                 <div class="text-logo">
                     <p>Air Max Tailwind 5 Skepta</p>
                     <div class="logo-group">
@@ -406,16 +406,37 @@
                 </div>
             </article>
             <section class="button-main">
-                <button><a href="index.html">Explorer plus de sneakers</a></button>
+                <button class="button"><a href="index.html">Explorer plus de sneakers</a></button>
             </section>
+            <!-- Test panier svg -->
+            <div class="icon-cart">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.3L19 7H7.3"/>
+                  </svg>
+                  <span>0</span>
+            </div>
+            <!-- ----- -->
         </section>
     </main>
 
+    <!-- Aside Panier ---------------- -->
     <aside>
-        <h2 id="panier">Panier
-        </h2>
-        <button><a href="index.html">Valider la commande</a></button>
+        <h1 id="panier">Panier</h1>
+        <section class="product-panier">
+            <article class="item">
+                <div class="image">
+                    <!-- <img src="images/img01 (15).avif"> -->
+                </div>
+
+            </article>
+        </section>
+
+        <div id="button-panier">
+            <button id="close">Fermer</a></button>
+            <button id="buy"><a href="index.html">Valider</a></button>
+        </div>
     </aside>
+    <!-- -------------------  -->
     <!-- Footer -->
 
     <footer>

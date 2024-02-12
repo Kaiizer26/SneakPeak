@@ -51,7 +51,7 @@
 * {
     padding: 0;
     margin: 0;
-    /*min-height: 3em;*/
+    /* min-height: 3em; */
     scroll-behavior: smooth;
 }
 
@@ -186,7 +186,7 @@ header li #login:hover {
     color: rgba(0, 0, 0, 0.7);
 }
 
-button {
+.button {
     padding: 15px 20px 15px 20px;
     width: 165px;
     text-align: center;
@@ -196,13 +196,13 @@ button {
     font-size: 22px;
 }
 
-button a {
+.button a {
     color: white;
     text-decoration: none;
 
 }
 
-button:hover {
+.button:hover {
     background: rgba(0, 0, 0, 0.7);
 }
 
@@ -239,8 +239,12 @@ nav button{
 
 /* Article Section -------------------- */
 
+.article-section {
+
+}
 
 article section {
+
     height: 400px;
     width: 250px;
     margin-left: 20px;
@@ -434,24 +438,98 @@ main .button-main button:hover {
     position: relative;
 } 
 
+/* Test panier svg -- */
+
+.icon-cart{
+    position: relative;
+    left: 50%;
+    top: 118px;
+}
+.icon-cart svg{
+    
+    text-align: right;    
+    width: 70px;
+
+}
+
+.icon-cart span{
+    /* position: relative; */
+    /* left: 10%;
+    bottom: 12%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2em;
+    right: -20px;
+    
+
+}
+/* Fin Test panier svg */
+/* Fin main -------- */
 /* Aside ----------------*/
 
 aside{
-    display: flex;
-    flex-direction: column;
+    
+    text-align: center;
     align-items: center;
-    height: 60vh;
+    width: 400px;
     background: #333533;
+    /* background-color: #1F1F1F; */
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    inset: 0 -400px 0 auto;
+    grid-template-columns: 70px 1fr 200px;
+    overflow: auto;
 }
 
-aside h2{
-    margin-top: 2em;
+aside img{
+    width: 200px;
+    
+}
+aside h1{
+    padding-top: 1em;
     font-size: 70px;
 }
 
-aside button{
-    margin-top: 10em;
+aside #button-panier{
+    display: flex;
+    /* position: fixed; */
+    margin-top: 45em;
+    top: 80%;
+    
+
 }
+aside button{
+    display: grid;
+    font-family: 'Inter Semi-Bold';
+    color: black;
+    font-size: 29px;
+    font-weight: 500;
+    padding: 10% ;
+    background-color: #ffda79;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+} 
+
+aside #close{
+    background-color: #eee;
+    
+}
+
+aside #buy a{
+    text-decoration: none;
+}
+
 
 
 /* FIN Aside ------------- */

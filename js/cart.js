@@ -1,71 +1,123 @@
-// 1) creation d'un panier vide en session storage
-
-// newCart = {
-//     "chaussures": [
-//         {
-//             "name": "test",
-//             "price": 34,
-//             "quantity": 2
-//         },
-//         {
-//             "name": "test2",
-//             "price": 63,
-//             "quantity": 1
-//         }
-//     ]
-// }
-
-// sessionStorage.setItem("cart", "");
-
-
-// 2) création d'une fonction/ou de la logique qui permet d'ajouter une chaussure dans le panier
-// 3) création de l'event qui permet d'executer le code qui va ajouter au panier, on fais une boucle qui vient créer tous les l'event pour tous les bouton
-let mesBoutons = document.querySelectorAll(".add-cart")
-
-mesBoutons.forEach(unBouton => {
-    addEventListener("click", () => {
-        // ma logique
-        // var cart = JSON.parse(sessionStorage.getItem("cart"));
-        // unBouton.dataset.price
-        let cart = JSON.parse(sessionStorage.getItem("cart"));
-
-        if (cart == null) {
-            cart = {
-                "chaussures": []
-            }
-        }
-
-        cart.chaussures.push({
-            "name": unBouton.dataset.name,
-            "price": unBouton.dataset.price,
-        })
-
-        sessionStorage.setItem("cart", JSON.stringify(cart));
-    })
+// Initialisation de Flickity
+var elem = document.querySelector('.article-section');
+var flkty = new Flickity(elem, {
+    cellAlign: 'left',
+    contain: true
 });
 
-// 4) dans l'event on vérifie si on a déjà un panier et si il existe déjà on vient juste rajouter la nouvelle au panier
-addEventListener("")
+// Déclaration du panier
+var panier = [];
+
+// Fonction pour ajouter un article au panier
+function ajouterAuPanier(nom, prix) {
+    panier.push({ nom: nom, prix: prix });
+    afficherPanier();
+}
+
+// Fonction pour afficher le panier
+function afficherPanier() {
+    var panierElement = document.querySelector('.product-panier');
+    panierElement.innerHTML = '';
+    var total = 0;
+    panier.forEach(function (article, index) {
+        var articleElement = document.createElement('article');
+        articleElement.innerHTML = '<div class="text-logo"><p>' + article.nom + '</p><div class="opacity-on-mouse"><p>' + article.prix + ' €</p></div></div>' +
+                                    index;
+        panierElement.appendChild(articleElement);
+        total += article.prix;
+    });
+    document.getElementById('total').innerText = total.toFixed(2);
+
+    // Ajouter des écouteurs d'événements pour les boutons de suppression
+    var removeButtons = document.querySelectorAll('.remove-button');
+    removeButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            var index = parseInt(button.getAttribute('data-index'));
+            supprimerDuPanier(index);
+        });
+    });
+}
 
 
-// 5 pour afficher le panier on recupère le cart en session storage
-
-let cart = JSON.parse(sessionStorage.getItem("cart"));
-
-let htmlFinal = "";
-
-cart.chaussures.forEach(chaussure => {
-    htmlFinal = htmlFinal + "<div><p>" + chaussure.name + "</p>" + "<p>" + chaussure.price + "</p></div>";
+// Event listeners pour les boutons "Fermer" et "Valider"
+document.getElementById('close').addEventListener('click', function () {
+    document.querySelector('aside').classList.remove('open');
 });
 
-document.querySelector(".cart").insertAdjacentHTML(htmlFinal);
+document.getElementById('buy').addEventListener('click', function () {
+    alert('Commande validée ! Total : ' + document.getElementById('total').innerText + ' €');
+    panier = [];
+    afficherPanier();
+});
 
-// 7) insert du html à l'emplacement prévue dans le DOM avec insert
+// Ajout d'événements pour les boutons "Ajouter au Panier" sur chaque article
+var articles = document.querySelectorAll('.products article');
+articles.forEach(function (article) {
+    article.querySelector('.logo-group').addEventListener('click', function () {
+        var nom = article.querySelector('.text-logo p').innerText;
+        var prix = parseFloat(article.querySelector('.opacity-on-mouse p').innerText);
+        ajouterAuPanier(nom, prix);
+    });
+});
 
 
-// 8) calcule du montant total
-montantTotal = 0
+// 2
 
-cart.chaussures.forEach(chaussure => {
-   montantTotal += chaussure.price;
+
+
+
+
+ // Fonction pour ajouter un produit au panier
+// Fonction pour ajouter un produit au panier
+function ajouterAuPanier(nomProduit, prixProduit) {
+    // Créer un nouvel élément d'article
+    var nouvelArticle = document.createElement("article");
+
+    // Contenu de l'article
+    nouvelArticle.innerHTML =`        
+        <div class="image">
+
+            <img src="../images/img01 (4).avif" alt="${nomProduit}"> 
+        </div>
+        <div class="nom">
+            <p>${nomProduit}</p>
+        </div>
+        <div class="details">   
+            <p>${prixProduit} €</p>
+            <button onclick="supprimerDuPanier(this)">Supprimer</button>
+        </div>`
+    ;
+
+    // Ajouter l'article au panier
+    var sectionPanier = document.querySelector(".product-panier");
+    sectionPanier.appendChild(nouvelArticle);
+
+    // Mettre à jour le nombre d'articles dans le panier
+    var nombreArticles = sectionPanier.querySelectorAll("article").length;
+    document.querySelector(".icon-cart span").textContent = nombreArticles;
+}
+
+// Fonction pour supprimer un produit du panier
+function supprimerDuPanier(bouton) {
+    // Supprimer l'article parent du bouton
+    var articleASupprimer = bouton.parentNode.parentNode;
+    articleASupprimer.remove();
+
+    // Mettre à jour le nombre d'articles dans le panier
+    var nombreArticles = document.querySelectorAll(".product-panier article").length;
+    document.querySelector(".icon-cart span").textContent = nombreArticles;
+}
+
+// Exemple d'utilisation de la fonction d'ajout au panier
+document.addEventListener("DOMContentLoaded", function() {
+    var boutonAjouter = document.querySelectorAll(".button-main button");
+    boutonAjouter.forEach(function(bouton) {
+        bouton.addEventListener("click", function(event) {
+            var article = event.target.closest("article");
+            var nomProduit = article.querySelector(".text-logo p").textContent;
+            var prixProduit = article.querySelector(".opacity-on-mouse p").textContent;
+            var imgProduit= article.querySelector("article img").textContent;
+            ajouterAuPanier(nomProduit, prixProduit);
+        });
+    });
 });
