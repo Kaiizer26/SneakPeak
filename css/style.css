@@ -347,6 +347,7 @@ main {
     justify-content: center;
     background-color: white;
     width: 100%;
+    transition: transform .5s;
 }
 
 main h2 {
@@ -470,6 +471,8 @@ main .button-main button:hover {
     
 
 }
+
+
 /* Fin Test panier svg */
 /* Fin main -------- */
 /* Aside ----------------*/
@@ -489,6 +492,15 @@ aside{
     inset: 0 -400px 0 auto;
     grid-template-columns: 70px 1fr 200px;
     overflow: auto;
+    transition: .5s;
+}
+
+body.showCart .cartTab{
+    inset: 0 0 0 auto;
+}
+
+body.showCart main{
+    transform: translateX(-250px);
 }
 
 aside img{
