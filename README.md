@@ -45,10 +45,3 @@ Contenu Pertinent : Le contenu de notre site, y compris le catalogue de produits
 
 Facilité d'Achat : Les visiteurs peuvent  ajouter des articles à leur panier, passer à la caisse et finaliser leur commande en quelques étapes seulement. 
 
-
-
-
-
-
-
-

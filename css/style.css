@@ -1,0 +1,652 @@
+@font-face {
+    font-family: 'Aeonik Bold';
+    src: url(../asset/AeonikProTRIAL-Bold.otf);
+}
+
+@font-face {
+    font-family: 'Aeonik Regular';
+    src: url(../asset/AeonikProTRIAL-Regular.otf);
+}
+
+@font-face {
+    font-family: 'Inter Light';
+    src: url(../asset/Inter-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Inter Regular';
+    src: url(../asset/Inter-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Inter Semi-Bold';
+    src: url(../asset/Inter-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'Inter Bold';
+    src: url(../asset/Inter-Black.ttf);
+}
+
+@font-face {
+    font-family: 'MonaSans-ExtraLight';
+    src: url(../asset/MonaSans-ExtraLight.otf);
+}
+
+@font-face {
+    font-family: 'MonaSans-Regular';
+    src: url(../asset/MonaSans-Regular.otf);
+}
+
+@font-face {
+    font-family: 'Source Serif 4-Regular';
+    src: url(../asset/sourceserif4/SourceSerif4-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Source Serif 4-Light';
+    src: url(../asset/sourceserif4/SourceSerif4-Light.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    /* min-height: 3em; */
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8f7f4;
+    font-family: 'Source Serif 4-Regular', 'MonaSans-Regular', 'sans-serif';
+    font-size: 22px;
+    overflow-x: hidden;
+
+}
+
+/* Header ---------------- */
+
+header {
+    margin-top: 2em;
+    display: flex;
+    font-family: 'Inter Semi-Bold';
+    justify-content: space-around;
+    background-color: #f8f7f4;
+    width: 100%;
+}
+
+header a {
+    margin-left: 1em;
+
+    flex-wrap: nowrap;
+    text-decoration: none;
+    color: black;
+}
+
+header div a:hover {
+    color: rgba(0, 0, 0, 0.70);
+}
+
+header .marque {
+    font-size: 28px;
+    font-family: 'Source Serif 4-Regular';
+    margin-left: 10em;
+
+}
+
+/* Barre de navigation ---------- */
+
+header form {
+    margin-left: 10em;
+    z-index: 333;
+
+
+}
+
+.search-box {
+    transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background: #ebebeb;
+    margin-right: -60px;
+}
+
+.search-box+label .search-icon {
+    color: black;
+}
+
+.search-box:hover {
+    color: white;
+    background: #c8c8c8;
+    box-shadow: 0 0 0 5px #3d4752;
+}
+
+.search-box:hover+label .search-icon {
+    color: white;
+}
+
+.search-box:focus {
+    /*transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.6s, background 0.6s;*/
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding-left: 15px;
+    cursor: text;
+    width: 200px;
+    border-radius: auto;
+    background: #ebebeb;
+    color: black;
+}
+
+.search-box:focus+label .search-icon {
+    color: black;
+}
+
+.search-box:not(:focus) {
+    text-indent: -5000px;
+}
+
+#search-submit {
+    position: relative;
+    left: -5000px;
+}
+
+.search-icon {
+    position: relative;
+    left: -30px;
+    color: white;
+    cursor: pointer;
+}
+
+header img {
+
+    position: relative;
+    bottom: 20px;
+    right: 280px;
+    width: 24px;
+    z-index: 555;
+
+}
+
+/* Fin Barre de recherche----------------- */
+
+/* Bouton Log in Register ----------------- */
+
+header li {
+    list-style: none;
+}
+
+header li a {
+    margin-right: 1em;
+}
+
+header li #login:hover {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.button {
+    padding: 15px 20px 15px 20px;
+    width: 165px;
+    text-align: center;
+    background: black;
+    border-radius: 30px;
+    border: none;
+    font-size: 22px;
+}
+
+.button a {
+    color: white;
+    text-decoration: none;
+
+}
+
+.button:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* FIN Header ------------------------ */
+
+/* Nav [Hero Banner]-------------- */
+nav {
+    margin-top: 8em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50vh;
+    background-color: #f8f7f4;
+    width: 100%;
+
+}
+
+nav h1 {
+    font-family: 'Source Serif 4-Light';
+    font-size: 66px;
+    text-align: center;
+}
+
+nav h2 {
+    margin-top: 3em;
+    font-family: 'MonaSans-ExtraLight';
+}
+nav button{
+    margin-top: 2em;
+}
+
+
+/* FIN Nav --------------------- */
+
+/* Article Section -------------------- */
+
+.article-section {
+
+}
+
+article section {
+
+    height: 400px;
+    width: 250px;
+    margin-left: 20px;
+    border-radius: 12px;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+article #img1 {
+    background-image: url(../images/img/Streetwear.jpg);
+    background-size: cover;
+}
+
+article #img2 {
+    background-image: url(../images/img/ig_\ MarzMadeMe\ \(1\).jpg);
+    background-size: cover;
+}
+
+article #img3 {
+    background-image: url(../images/img/azert.jpg);
+    background-size: cover;
+}
+
+article #img4 {
+    background-image: url(../images/img/IG\ beamerthekid.jpg);
+    background-size: cover;
+}
+
+article #img5 {
+    background-image: url(../images/téléchargement\ \(11\).jpg);
+    background-size: cover;
+}
+
+article #img6 {
+    background-image: url(../images/img/ig_\ MarzMadeMe.jpg);
+    background-size: cover;
+}
+
+article #img7 {
+    background-image: url(../images/téléchargement\ \(12\).jpg);
+    background-size: cover;
+}
+
+article #img8 {
+    background-image: url(../images/irisloveunicorns\ on\ IG.jpg);
+    background-size: cover;
+}
+
+article #img9 {
+    background-image: url(../images/téléchargement\ \(10\).jpg);
+    background-size: cover;
+}
+
+article #img10 {
+    background-image: url(../images/img2/Outfit\ 35.jpg);
+    background-size: cover;
+}
+
+article #img11 {
+    background-image: url(../images/img2/téléchargement\ \(16\).jpg);
+    background-size: cover;
+}
+
+article #img12 {
+    background-image: url(../images/img/téléchargement\ \(13\).jpg);
+    background-size: cover;
+}
+
+article #img13 {
+    background-image: url(../images/img2/téléchargement\ \(17\).jpg);
+    background-size: cover;
+}
+
+article #img14 {
+    background-image: url(../images/img2/téléchargement\ \(19\).jpg);
+    background-size: cover;
+}
+
+article #img15 {
+    background-image: url(../images/img2/téléchargement\ \(18\).jpg);
+    background-size: cover;
+}
+
+article #img16 {
+    background-image: url(../images/img2/téléchargement\ \(20\).jpg);
+    background-size: cover;
+}
+
+.article-section section img {
+    width: 560px;
+    height: 400px
+}
+
+/* FIN Article Section -------------- */
+
+/* Main [Trouve ta paire de sneakers] ----------------- */
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+    transition: transform .5s;
+}
+
+main h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+}
+
+main section {
+    margin-left: 1em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main section article{
+    margin-bottom: 3em;
+}
+main section img {
+    width: 560px;
+    height: 400px;
+    margin-left: 2em;
+    border-radius: 25px;
+
+
+
+}
+
+main section article img:hover {
+    opacity: 50%;
+}
+
+main section article div {
+    justify-content: space-around;
+
+}
+
+main section article .text-logo{
+    margin-top: 50px;
+}
+
+main section article .logo-group{
+    margin-left: 20em;
+}
+
+main section article .logo {
+    width: 24px;
+    height: 24px;
+    margin-left: 1em;
+
+}
+
+main .button-main button {
+    position: relative;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    left: 90vh;
+    padding: 15px 20px 15px 20px;
+    width: 185px;
+    text-align: center;
+    background: black;
+    border-radius: 30px;
+    border: none;
+    font-size: 22px;
+
+}
+
+main .button-main button:hover {
+    background: rgba(0, 0, 0, 0.70);
+
+}
+
+.opacity-on-mouse {
+    opacity: 0;
+    color: rgb(163, 127, 79);
+    transition: opacity 0.3s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    font-size: 75px;
+    
+} 
+.opacity-on-mouse:hover {
+    opacity: 1;
+}
+
+.products article {
+    position: relative;
+} 
+
+/* Test panier svg -- */
+
+.icon-cart{
+    position: relative;
+    left: 50%;
+    top: 118px;
+}
+.icon-cart svg{
+    
+    text-align: right;    
+    width: 70px;
+
+}
+
+.icon-cart span{
+    /* position: relative; */
+    /* left: 10%;
+    bottom: 12%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2em;
+    right: -20px;
+    
+
+}
+
+
+/* Fin Test panier svg */
+/* Fin main -------- */
+/* Aside ----------------*/
+
+aside{
+    
+    text-align: center;
+    align-items: center;
+    width: 400px;
+    background: #333533;
+    /* background-color: #1F1F1F; */
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    inset: 0 -400px 0 auto;
+    grid-template-columns: 70px 1fr 200px;
+    overflow: auto;
+    transition: .5s;
+}
+
+body.showCart .cartTab{
+    inset: 0 0 0 auto;
+}
+
+body.showCart main{
+    transform: translateX(-250px);
+}
+
+aside img{
+    width: 200px;
+    
+}
+aside h1{
+    padding-top: 1em;
+    font-size: 70px;
+}
+
+aside #button-panier{
+    display: flex;
+    /* position: fixed; */
+    margin-top: 45em;
+    top: 80%;
+    
+
+}
+aside button{
+    display: grid;
+    font-family: 'Inter Semi-Bold';
+    color: black;
+    font-size: 29px;
+    font-weight: 500;
+    padding: 10% ;
+    background-color: #ffda79;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+} 
+
+aside #close{
+    background-color: #eee;
+    
+}
+
+aside #buy a{
+    text-decoration: none;
+}
+
+
+
+/* FIN Aside ------------- */
+
+
+/* Footer--------------- */
+
+
+footer{
+    padding-top: 5em;
+    background: #ffda79; 
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer h2{
+    font-size: 70px;
+}
+
+footer p{
+    font-size: 28px;
+}
+footer #paragraphe1{
+    margin-top: 3em;
+}
+footer #paragraphe2{
+    margin-top: 3em;
+}
+footer p a{
+    text-decoration: underline;
+    color: black;
+}
+
+/* 2eme page formulaire */
+
+.autrement{
+    margin-top: 50em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+    width: 50%;
+    margin: 50px auto; 
+    padding: 20px; 
+    background-color: white; 
+    /* border: 2px solid #333;  */
+    border-radius: 12px;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.4);
+    
+    
+}
+
+.gros{
+    margin-top: 3em;
+    padding-bottom: 4em;
+}
+
+.gros input{
+    transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background: #ebebeb;
+    margin-right: -60px;
+}
+
+.gros input:focus {
+    /*transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.6s, background 0.6s;*/
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding-left: 15px;
+    cursor: text;
+    width: 200px;
+    border-radius: auto;
+    background: #ebebeb;
+    color: black;
+}
+
+/* .gros input:hover{
+    
+    color: white;
+    background: #c8c8c8;
+    box-shadow: 0 0 0 5px #3d4752;
+    
+} */
+
+.gros button{
+    padding: 15px 20px 15px 20px;
+    width: 165px;
+    text-align: center;
+    background: black;
+    border-radius: 30px;
+    border: none;
+    font-size: 22px;
+}
+
+.gros button a{
+    color: white;
+    text-decoration: none;
+}
