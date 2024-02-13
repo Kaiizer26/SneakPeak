@@ -577,3 +577,76 @@ footer p a{
     text-decoration: underline;
     color: black;
 }
+
+/* 2eme page formulaire */
+
+.autrement{
+    margin-top: 50em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+    width: 50%;
+    margin: 50px auto; 
+    padding: 20px; 
+    background-color: white; 
+    /* border: 2px solid #333;  */
+    border-radius: 12px;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.4);
+    
+    
+}
+
+.gros{
+    margin-top: 3em;
+    padding-bottom: 4em;
+}
+
+.gros input{
+    transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background: #ebebeb;
+    margin-right: -60px;
+}
+
+.gros input:focus {
+    /*transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.6s, background 0.6s;*/
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding-left: 15px;
+    cursor: text;
+    width: 200px;
+    border-radius: auto;
+    background: #ebebeb;
+    color: black;
+}
+
+/* .gros input:hover{
+    
+    color: white;
+    background: #c8c8c8;
+    box-shadow: 0 0 0 5px #3d4752;
+    
+} */
+
+.gros button{
+    padding: 15px 20px 15px 20px;
+    width: 165px;
+    text-align: center;
+    background: black;
+    border-radius: 30px;
+    border: none;
+    font-size: 22px;
+}
+
+.gros button a{
+    color: white;
+    text-decoration: none;
+}
