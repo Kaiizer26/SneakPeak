@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'Aeonik Light';
+    src: url(../asset/AeonikProTRIAL-Light.otf);
+}
+
+@font-face {
+    font-family: 'Aeonik Bold';
+    src: url(../asset/AeonikProTRIAL-Bold.otf);
+}
+
+@font-face {
+    font-family: 'Aeonik Regular';
+    src: url(../asset/AeonikProTRIAL-Regular.otf);
+}
+
+@font-face {
+    font-family: 'Inter Light';
+    src: url(../asset/Inter-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Inter Regular';
+    src: url(../asset/Inter-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Inter Bold';
+    src: url(../asset/Inter-Black.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    min-height: 3em;
+}
+
+body{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Inter Regular', 'sans-serif';
+    font-size: 22px;
+}
+header{
+    padding-top: 1em;
+    display: flex;
+    justify-content: space-around;
+    background-color: red;
+    width: 100%;
+}
+
+header a{
+    margin-left: 1em;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    text-decoration: none;
+    color: black;
+}
+
+header .logo{
+    font-size: 28px;
+    
+}
+
+
+header li{
+    list-style: none;
+}
+
+
+button{
+    padding: 15px 30px 15px 30px;
+    width: 160px;
+    text-align: center;
+    background: black;
+    font-family: 'Aeonik Bold', 'Inter Bold', sans-serif;
+    border-radius: 30px;
+    border: none;
+}
+
+button a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Inter Light';
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: green;
+    width: 100%;
+    
+}
+
+main{
+    background-color: purple;
+    width: 100%;
+}
+
+footer{
+    background-color: yellow;
+    width: 100%;
+}
+/* Footer--------------- */
+
+footer{
+    background: burlywood;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 600px;
+    padding: 27px;
+}
+
+
+
+footer h2{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    font-weight: normal;
+}
+
+footer h5{
+    font-weight: normal;
+}
+
+footer p{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+footer h6{
+    display:flex;
+    align-items: center;
+    padding: 150px;
+    position: absolute;
+    top:700px;
+    left:450px;
+    font-weight: normal;
+}
+footer onglets{
+    position: absolute;
+    top:870px;
+    left:645px;
+    text-decoration:underline;
+    font-size:smaller;
+    font-weight: normal;
+}
